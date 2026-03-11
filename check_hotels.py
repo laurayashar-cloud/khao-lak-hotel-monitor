@@ -30,7 +30,7 @@ def save_state(state):
         json.dump(state, f)
 
 def send_alert(message):
-    webhook = https://hooks.slack.com/services/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
+    webhook = os.environ["SLACK_WEBHOOK_URL"]
     requests.post(webhook, json={"text": message})
 
 def check():
