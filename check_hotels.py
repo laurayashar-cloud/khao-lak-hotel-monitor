@@ -34,6 +34,7 @@ def send_alert(message):
     requests.post(webhook, json={"text": message})
 
 def check():
+    send_alert("Test message from hotel monitor")
     state = load_state()
     new_state = {}
 
